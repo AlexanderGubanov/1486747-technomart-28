@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Александр](https://up.htmlacademy.ru/htmlcss/28/user/1486747).
-* Наставник: `Неизвестно`.
+* Наставник: [Виктор Гирда](https://htmlacademy.ru/profile/viktorgirda). 
 
 ---
 
