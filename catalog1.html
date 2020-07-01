@@ -7,7 +7,7 @@
   <body>
     <header>
       <div class="header-top">
-        <a><img src="#" alt="Логотип Техномарта"></a> <!-- Здесь будет логотип-->
+        <a href="main.html"><img src="#" alt="Логотип Техномарта"></a> <!-- Здесь будет логотип-->
         <form action="#" method="post">
           <label>
             <input type="search" name="search" placeholder="Поиск"><!-- +иконка лупы-->
@@ -58,109 +58,141 @@
       </nav>
     </header>
     <main>
-      <nav>
-        <img src="#" alt="Иконка домика">
-        <a href="blank.html">Каталог</a>  
-        <a href="blank.html">Инстурмент</a> 
-        <a href="blank.html">Перфораторы</a>       
-      </nav>
-      <div>
-        <h1>Перфораторы</h1>
-      </div>
-      <aside>
+      <ul>
+        <li><a href="main.html"><img src="#" alt="Иконка домика"></a></li>
+        <li><a href="blank.html">Каталог</a></li>
+        <li><a href="blank.html">Инстурмент</a></li>
+        <li>Перфораторы</li>
+      </ul>
+      <h1>Перфораторы</h1>
+      <section>
+        <h2>Фильтр:</h2>
         <form action="#" method="post">
-          <h2>Производители:</h2>
+          <h3>Цена</h3>
+          <label><input type="range" min="0" max="300" step="10" value="250"><br>
+          0 - 300</label>
+          <h3>Производители:</h3>
           <label><input type="checkbox" name="Bosh" checked>Bosh</label>
           <label><input type="checkbox" name="Interscol">Интерскол</label>
           <label><input type="checkbox" name="Makita" checked>Makita</label>
           <label><input type="checkbox" name="Dewolt">Dewolt</label>
           <label><input type="checkbox" name="Hitachi">Hitachi</label>
-          <h2>Питание:</h2>
+          <h3>Питание:</h3>
           <label><input type="radio" name="power" value="Аккумуляторные" checked>Аккумуляторные</label>
           <label><input type="radio" name="power" value="Сетевые">Сетевые</label>
         </form>
         <button>Показать</button>
-      </aside>
-      <h2>Товары</h2>
-      <!--Спрятать подзаг-->
-      <ul>
-        <li>
+      </section>
+      <section>
+        <div>
+          <h2>Сортировка:</h2>
+          <button>По цене</button>
+          <button>По типу</button>
+          <button>По функционалу</button>
+          <button>Вверх</button> <!--Заменить слова иконками-->
+          <button>Вниз</button>
+        </div>
+        <ul>
+          <li>
             <img src="img/bfg6000.png" alt="Перфоратор">
             <h3 class="product">Перфоратор BOSH BFG6000</h3>
             <a href="blank.html">Купить</a> <!--Здесь нужен hover-->
             <a href="blank.html">В закладки</a>
             <span class="old-price">30500Р.</span> 
             <span class="new-price">25500Р.</span>          
-        </li>
-        <li>
+          </li>
+          <li>
             <img src="img/bfg6000.png" alt="Перфоратор">
             <h3 class="product">Перфоратор BOSH BFG6000</h3>
             <a href="blank.html">Купить</a> 
             <a href="blank.html">В закладки</a>
             <span class="old-price">30500Р.</span> 
             <span class="new-price">25500Р.</span>
-        </li>
-        <li>
+          </li>
+          <li>
             <img src="img/bfg6000.png" alt="Перфоратор">
             <h3 class="product">Перфоратор BOSH BFG6000</h3>
             <a href="blank.html">Купить</a> 
             <a href="blank.html">В закладки</a>
             <span class="old-price">30500Р.</span> 
             <span class="new-price">25500Р.</span>
-        </li>
-        <li>
+          </li>
+          <li>
             <img src="img/bfg3000.png" alt="Перфоратор">
             <h3 class="product">Перфоратор BOSH BFG3000</h3>
             <a href="blank.html">Купить</a> 
             <a href="blank.html">В закладки</a>
             <span class="old-price">22500Р.</span> 
             <span class="new-price">15500Р.</span>
-        </li>
-        <li>
+          </li>
+          <li>
             <img src="img/bfg6000.png" alt="Перфоратор">
             <h3 class="product">Перфоратор BOSH BFG6000</h3>
             <a href="blank.html">Купить</a> 
             <a href="blank.html">В закладки</a>              
             <span class="old-price">30500Р.</span> 
             <span class="new-price">25500Р.</span>
-        </li>
-        <li>
+          </li>
+          <li>
             <img src="img/bfg2000.png" alt="Перфоратор">
             <h3 class="product">Перфоратор BOSH BFG2000</h3>
             <a href="blank.html">Купить</a> 
             <a href="blank.html">В закладки</a>
             <span class="new-price">12500Р.</span>              
-        </li>
-        <li>
+          </li>
+          <li>
             <img src="img/bfg3000.png" alt="Перфоратор">
             <h3 class="product">Перфоратор BOSH BFG3000</h3>
             <a href="blank.html">Купить</a> 
             <a href="blank.html">В закладки</a>
             <span class="old-price">22500Р.</span> 
             <span class="new-price">15500Р.</span>              
-        </li>
-        <li>
+          </li>
+          <li>
             <img src="img/bfg6000.png" alt="Перфоратор">
             <h3 class="product">Перфоратор BOSH BFG6000</h3>
             <a href="blank.html">Купить</a> 
             <a href="blank.html">В закладки</a>
             <span class="old-price">30500Р.</span> 
             <span class="new-price">25500Р.</span>              
-        </li>
-        <li>
+          </li>
+          <li>
             <img src="img/bfg2000.png" alt="Перфоратор">
             <h3 class="product">Перфоратор BOSH BFG2000</h3>
             <a href="blank.html">Купить</a> 
             <a href="blank.html">В закладки</a>
             <p class="new-price">12500Р.</p>
-        </li>
-      </ul>
-      <div class="popup"> 
-        <img src="#"> <!--Добавить иконку галочки-->
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a>1</a>
+          </li>
+          <li>
+            <a href="blank.html">2</a>
+          </li>
+          <li>
+            <a href="blank.html">3</a>
+          </li>
+          <li>
+            <a href="blank.html">Следующая</a>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Пара слов о перфораторах</h2>
+        <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
+          Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. 
+          В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+        </p>
+      </section>
+      <div class="popup">
+        <img src="#" alt=""> <!--Добавить иконку галочки-->
         Товар добавлен в корзину
         <button class="close"><img src="#" alt="Закрыть"></button> <!--Добавить иконку крестика-->
         <div><a href="blank.html">Оформить заказ</a>
-        <a href="blank.html">Продолжить покупки</a></div>
+          <a href="blank.html">Продолжить покупки</a>
+        </div>
       </div>
     </main>
     <footer>
