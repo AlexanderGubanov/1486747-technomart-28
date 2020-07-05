@@ -3,45 +3,50 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
+    <link href="normalize.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
   </head>
   <body>
     <header>
       <div class="header-top">
-        <a><img src="#" alt="Логотип Техномарта"></a> <!-- Здесь будет логотип-->
+        <div class="container"> <!-- header-top container -->
+        <a class="logo-top" href="index.html"> <img src="img/svg-technomart/logo-technomart.svg" alt="Логотип Техномарта"></a>
         <form action="#" method="post">
           <label>
             <input type="search" name="search" placeholder="Поиск"><!-- +иконка лупы-->
           </label>
         </form>
-        <a href="blank.html">Закладки: 0</a>
-        <a href="blank.html">Корзина: 0</a>
-        <a href="blank.html">Оформить заказ</a>
-        <!-- добавить иконки: закладка и корзина-->
+        <a href="blank.html" class="links-top bookmarks">Закладки: 0</a>
+        <a href="blank.html" class="links-top cart">Корзина: 0</a>
+        <a href="blank.html" class="links-top checkout">Оформить заказ</a>
+        </div>
       </div>
       <div class="header-contact">
-        <p>
+        <div class="container-flex-spacebetween"> <!-- header-contact container -->
+        <div class="shop-description">
           Интернет-магазин строительных материалов и инструментов для ремонта
-        </p>
+        </div>
         <div>
           <h2 class="visually-hidden">Контакты</h2>
-          <!--Скрыть подзаг-->
-          <div>
-            <a href="#">
-            <img src="#" alt="Иконка телефонной трубки">
+          
+       
+            <a class="phone" href="#">
             +7(812)555-05-55
             </a>
-          </div>
+        
           <address>г. Санкт Петербург, ул. Большая Конюшенная, д.19/8</address>
         </div>
-        <div>
+        <div class="enter">
           <h2 class="visually-hidden">Вход</h2>
-          <!--Скрыть подзаг-->
-          <a href="#">Войти</a>
-          <a href="#">Регистарция</a>
+          
+          <a class="login" href="#">Войти</a>
+          <a class="registration" href="#">Регистарция</a>
+        </div>
         </div>
       </div>
+
       <nav>
-        <ul>
+        <ul class="navigation-list">
           <li><a href="blank.html">Главная</a></li>
           <li><a href="blank.html">Компания</a></li>
           <li><a href="catalog1.html">Каталог</a></li>
@@ -54,7 +59,7 @@
     </header>
     <main>
       <h1 class="visually-hidden">Магазин Техномарт</h1>
-      <!--Спрятать заг-->
+      
       <div>
         <!--Может быть, тут не дивы нужны, а список или второй nav?-->
         <div>Материалы 
@@ -72,11 +77,20 @@
         <div>Доставка 
           <a href="blank-html">Бесплатно</a>
         </div>
-        <figure>
-          <figcaption>Перфораторы Настоящие мужские игрушки</figcaption>
-          <img src="#" alt=""> 
-          <a href="catalog1.html">Открыть каталог</a>
-        </figure>
+        <div class="slider">
+          <ul class="slider-items">
+            <li class="slider-item">
+              <span>Перфораторы Настоящие мужские игрушки</span>
+              <img src="#" alt=""> 
+              <a href="catalog1.html">Открыть каталог</a>
+            </li>
+            <li class="slider-item">
+              <span>Перфораторы Настоящие мужские игрушки</span>
+              <img src="#" alt=""> 
+              <a href="catalog1.html">Открыть каталог</a>
+            </li>
+          </ul>
+        </div>
         <button type="button" disabled>Назад</button><!--Заменить слова галочками-->
         <button type="button">Вперед</button>
       </div>
@@ -195,45 +209,58 @@
       </section>
       <img src="img/map-popup.png" alt="Большая карта" class="popup">
     </main>
+    
     <footer>
+      
       <div class="footer-top">
-        <a><img src="#" alt="Логотип Техномарта"></a> <!-- Здесь будет логотип-->
-        <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8Б 
+        <div class="container-flex-spacebetween"> <!-- footer-top container -->
+        <div class="logo-address">
+          <div class="logo-bottom"><a><img src="img/svg-technomart/logo-technomart.svg" alt="Логотип Техномарта"></a></div> 
+          <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8Б <br>
           +7 (812) 555-05-55
         </address>
-        <ul>
-          <li><a href="blank.html">Компания</a></li>
-          <li><a href="blank.html">Новости</a></li>
-          <li><a href="blank.html">Каталог</a></li>
-          <li><a href="blank.html">Доставка</a></li>
-          <li><a href="blank.html">Контакты</a></li>
+        </div>
+        <div class="nav-bottom">
+        <ul class="list-top">
+          <li class="item-top"><a href="blank.html">Компания</a></li>
+          <li class="item-top"><a href="blank.html">Новости</a></li>
+          <li class="item-top"><a href="blank.html">Каталог</a></li>
+          <li class="item-top"><a href="blank.html">Доставка</a></li>
+          <li class="item-top"><a href="blank.html">Контакты</a></li>
         </ul>
-        <ul>
-          <li><a href="blank.html">Материалы</a></li>
-          <li><a href="blank.html">Техника</a></li>
-          <li><a href="blank.html">Инструменты</a></li>
-          <li><a href="blank.html">Спецпредложения</a></li>
+        <ul class="list-bottom">
+          <li class="item-bottom"><a href="blank.html">Материалы</a></li>
+          <li class="item-bottom"><a href="blank.html">Техника</a></li>
+          <li class="item-bottom"><a href="blank.html">Инструменты</a></li>
+          <li class="item-bottom"><a href="blank.html">Спецпредложения</a></li>
         </ul>
+        </div>
+      </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2010–2019 Компания «Техномарт» 
+        <div class="container-flex-spacebetween container-flex-verticalcenter"> <!-- footer-bottom container -->
+        <p class="copyright">
+          © 2010–2019 Компания «Техномарт» 
           Все права защищены
         </p>
-        <ul>
+        <ul class="social-networks">
           <li>
-            <a href="#">Вконтакте</a>
+            <a class="vk" href="#"></a>
           </li>
           <li>
-            <a href="#">Фейсбук</a>
+            <a class="fb" href="#"></a>
           </li>
           <li>
-            <a href="#">Инстаграм</a>
+            <a class="ig" href="#"></a>
           </li>
         </ul>
-        <!--Заменить иконками соцсетей-->
-        <p>Обратная связь: <a href="#">mail@htmlacademy.ru</a></p>
-        <p>Разработано — <a href="blank.html">htmlacademy.ru</a></p>
+          <div class="feedback-developed">
+        <p cclass="feedback">Обратная связь: <br><a href="#">mail@htmlacademy.ru</a></p>
+        <p class="developed">Разработано — <br><a href="blank.html">htmlacademy.ru</a></p>
+          </div>
+        </div>
       </div>
+      
     </footer>
   </body>
 </html>
