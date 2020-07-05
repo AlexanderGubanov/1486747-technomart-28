@@ -217,7 +217,7 @@
         color: rgba(255,255,255,0.5);
    }
    
-   .cart-user {
+   .user-cart {
         background-image: url("img/svg-technomart/icon-cart.svg");
         background-repeat: no-repeat;
         background-position: 17px center;
@@ -430,7 +430,72 @@
    
    /* MAIN */
    
+/* MAIN-INDEX */
+
    
+/* MAIN-CATALOG1 */
+
+.catalog-headline {
+width: 940px;
+height: 89px;
+box-sizing: border-box;
+background-color: #F2F6F8;
+
+font-family: Cuprum;
+font-style: normal;
+font-weight: normal;
+font-size: 30px;
+line-height: 30px;
+text-transform: uppercase;
+
+padding-top: 29px;
+padding-left: 29px;
+margin: 0px;
+}
+
+.catalog-navigation {
+     height: 59px;
+     margin: 0px;
+         
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
+
+     font-family: PT Sans;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 13px;
+     line-height: 18px;    
+     text-transform: uppercase;
+     color: var(--black);
+
+     background-image: url("img/svg-technomart/icon-home.svg");
+     background-repeat: no-repeat;
+     background-position: 0% 50%, 28px 50%;
+     list-style: none;
+}
+
+.catalog-navigation li {
+background-image: url(img/svg-technomart/icon-right-small.svg);
+background-repeat: no-repeat;
+padding-left: 20px;
+background-position: 0px 3px;
+margin-left: 20px;
+     }
+
+.catalog-navigation li:first-child {
+margin: 0px;
+}
+
+.catalog-navigation a {
+     color: var(--black);
+}
+
+/* Products */
+.products {
+display: flex;
+}
+
    /* FOOTER */
    footer {
         height: 300px;
