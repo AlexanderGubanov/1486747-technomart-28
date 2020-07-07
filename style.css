@@ -126,7 +126,7 @@
    
    /* HEADER */
    header {
-        height: 320px;
+        
         background-color: var(--basic-background);
         
         font-size: 18px; 
@@ -158,9 +158,6 @@
         float: left;
     }
         
-    .logo-top img {
-        height: 18px;
-    }
    
    .logo-top:hover {
         background-color: var(--error);
