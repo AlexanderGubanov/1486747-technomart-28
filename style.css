@@ -66,6 +66,7 @@
    --green-darker: #518534;
    --green-darkest: #367315;
    --grey-medium: #A9A9A9;
+   --add-background: #F2F6F8;
 
    --countainer-size: 960px;
    --countainer-nopadding-size: 940px;
@@ -86,12 +87,7 @@
    a {
      text-decoration: none;
       }
-      
-   img {
-       max-width: 100%;
-       height: auto;
-      }
-   
+         
    .visually-hidden {
         display: none;
    }
@@ -100,10 +96,18 @@
    .container {
         width: var(--countainer-size);
         margin: 0 auto;
-      
         padding-left: 10px;
         padding-right: 10px;
         box-sizing: border-box;
+   }
+
+   .container-flex{
+     width: var(--countainer-size);
+     margin: 0 auto;
+     padding-left: 10px;
+     padding-right: 10px;
+     box-sizing: border-box;
+     display: flex;
    }
    
    .container-flex-spacebetween {
@@ -113,6 +117,10 @@
         padding-left: 10px;
         padding-right: 10px;
         box-sizing: border-box;
+   }
+
+   .header-contact-container{
+        margin-bottom: 42px;
    }
    
    .container-flex-verticalcenter {
@@ -126,11 +134,8 @@
    
    /* HEADER */
    header {
-        
         background-color: var(--basic-background);
-        
         font-size: 18px; 
-        line-height: 24px;
     }
     
     header a {
@@ -139,24 +144,39 @@
      
     /* Header-top*/
      .header-top {
-        height: 42px;
+
         background-color: var(--dark-navy);
         font-size: 18px; 
         line-height: 24px;
         color:var(--white);
+        display:flex;
+    }
+
+    .header-top form {
+         display:inline-block;
     }
     
     /* Logo */
    .logo-top {
         width: 220px;
-        height: 47px;
-        display: block;
+        display: inline-block;
         text-align: center;
-        line-height: 47px;
         background-color: var(--basic-red);
-        box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
-        float: left;
+       /* box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);*/
+        padding-top: 12px;
+        padding-bottom: 6px;
+        position: relative;
     }
+
+    .logo-top::after {
+     content: "";
+     position: absolute;
+     bottom: -5px;
+     left: 0;
+     width: 100%;
+     height: 5px;
+     background-color: #c23f42;
+ }
         
    
    .logo-top:hover {
@@ -164,10 +184,6 @@
    }
    
    /* search */
-   .header-top form{
-        float: left;
-    }
-   
     input[type="search"] {
         width: 270px;
         height: 42px;
@@ -195,21 +211,20 @@
    
    /* links-top */
    .header-top .links-top {
-        display: block;
-        width: 150px;
-        height: 42px;
-        line-height: 42px;
+        display: inline-block;
         text-align: center;
         box-sizing: border-box;
-        float: left;
+        padding-top: 9px;
    }
    
    /* cart */
    .cart {
         background-image: url("img/svg-technomart/icon-cart.svg");
         background-repeat: no-repeat;
-        background-position: 17px center;
+        background-position: 12px center;
         padding-left: 8px;
+        padding-left: 40px;
+          padding-right: 26px;
    }
    
    .cart:active {
@@ -220,8 +235,9 @@
    .user-cart {
         background-image: url("img/svg-technomart/icon-cart.svg");
         background-repeat: no-repeat;
-        background-position: 17px center;
-        padding-left: 8px;
+        background-position: 12px center;
+        padding-left: 40px;
+          padding-right: 20px;
         background-color: var(--basic-red);
    }
    
@@ -229,8 +245,9 @@
    .bookmarks {
         background-image: url("img/svg-technomart/icon-bookmark.svg");
         background-repeat: no-repeat;
-        background-position: 17px center;
-        padding-left: 8px;
+        background-position: 12px center;
+        padding-left: 39px;
+        padding-right: 38px;
    }
    .bookmarks:active {
         background-color: var(--darkest-navy);
@@ -240,6 +257,8 @@
    /* checkout */
    .checkout {
         background-color: var(--basic-green);
+        padding-left: 18px;
+        padding-right: 18px;
    }
    .checkout:hover {
         background-color: var(--success);
@@ -249,63 +268,60 @@
         color: rgba(255, 255, 255, 0.5);
    }
    
+   .header-content {
+     padding-top: 46px;
+     padding-bottom: 60px;
+}
+
    /*Header-Contact*/
    .header-contact {
-        height: 158px;
         width: 100%;
         display: flex;
         justify-content: center;
-   }
+        }
    
    .shop-description {
         width: 197px;
-        height: 71px;
         font-family: "Cuprum", sans-serif;
         font-style: italic;
         font-weight: normal;
         font-size: 16px;
         line-height: 23px;
         color: var(--basic-red);
-        margin-top: 42px;
+        margin-left: 30px;
+        margin-top: 0px;
    }
    
    .phone {
-        display: inline-block;
-   
-        margin-top: 46px;
-        width: 270px;
-        height: 40px;
-        line-height: 34px;
-        border: 3px solid #FFFFFF;
-        
-        background-image: url("img/svg-technomart/icon-phone.svg");
-        background-repeat: no-repeat;
-        background-position: 39px center;
-        
-        padding-left: 74px;
-        box-sizing: border-box;
-             
-        font-family: Cuprum;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 21px;
-        color: var(--basic-red);
+     display: block;
+
+     border: 3px solid #FFFFFF;
+     
+     box-sizing: border-box;
+     font-family: Cuprum;
+     font-style: normal;
+     font-weight: bold;
+     font-size: 21px;
+     color: var(--basic-red);
+     padding-left: 40px;
+     padding-right: 45px;
+     padding-top: 7px;
+     padding-bottom: 8px;
     }
     
-    address{
+
+    address {
         font-family: "Cuprum", sans-serif;
         font-style: normal;
         font-weight: normal;
         font-size: 14px;
         line-height: 24px;
+        text-align: center;
     }
    
     /* user-profile */
-    .enter {
-        margin-top: 46px;
-   }
+
    .user {
-     margin-top: 46px;
      width: 299px;
 }
    
@@ -315,7 +331,6 @@
         display: inline-block;
         text-align: center;
         line-height: 45px;
-        height: 45px;
         width: 121px;
         margin-left: 10px;
    }
@@ -326,29 +341,31 @@
         display: inline-block;
         text-align: center;
         line-height: 45px;
-        height: 45px;
         width: 121px;
         margin-left: 10px;
    }
    
    .profile{
-        background-color: var(--white);
-        color:  var(--black);
-        display: inline-block;
-        text-align: center;
-        line-height: 45px;
-        height: 45px;
-        width: 299px;
-
-        background-image: url("img/svg-technomart/icon-user.svg"), url("img/svg-technomart/icon-logout.svg");
-        background-repeat: no-repeat;
-        background-position: 15px 50%, 262px 50%;
+     background-color: var(--white);
+     color: var(--black);
+     display: inline-block;
+     text-align: center;
+     background-image: url("img/svg-technomart/icon-user.svg"), url("img/svg-technomart/icon-logout.svg");
+     background-repeat: no-repeat;
+     background-position: 15px 50%, 262px 50%;
+     padding-top: 11px;
+     padding-bottom: 10px;
+     padding-left: 56px;
+     padding-right: 56px;
+     font-size: 21px;
    }
    
    .user-submenu {
         display: flex;
         justify-content: center;
         margin-top: 0px;
+        margin-bottom:0px;
+        margin-top:7px;
    }
    
    .user-submenu a {
@@ -394,10 +411,7 @@
    /* navigation */
    .navigation-list {
         width: var(--countainer-nopadding-size);
-        height: 60px;
-        margin: 0px;
-        margin-right: auto;
-        margin-left: auto;
+        margin: 0 auto;
         padding: 0px;
         
         background-color: var(--navy);
@@ -410,12 +424,8 @@
    
    .navigation-list a {
         display: inline-block;
-        min-width: 122px;
         text-align: center;
-        height: 60px;
-        line-height: 60px;
-        padding-left: 24px;
-        padding-right: 24px;
+        padding: 20px 31px;
         box-sizing: border-box;
    }
    
@@ -431,32 +441,102 @@
    /* MAIN */
    
 /* MAIN-INDEX */
+/* producers */
+.producers {
+     width: 940px;
+     background-color: #f9f5f0;
+     padding-top: 29px;
+     padding-left: 29px;
+     padding-bottom: 29px;
+     margin: 0px;
+}
 
+.producers h2 {
+     font-family: Cuprum;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 30px;
+     text-transform: uppercase;
+     display: inline;
+}
+
+.producers a {
+color: var(--white);
+background-color: var(--basic-red);
+
+font-family: "Cuprum";
+font-style: regular;
+font-size: 14px;
+line-height: 18px;
+text-decoration: uppercase;
+}
+
+.producers-list {
+     list-style: none;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: flex-start;
+     }
+     
+     .producers-list {
+     padding-left: 0px;
+     }
+
+     .producers-list li a {
+     display: block;
+     border: 1px solid grey;
+     width: 220px;
+     height: 145px;
+     } 
+
+     .producers-list li a:not(:nth-child(4n)) {
+     margin-right: 10px;
+     margin-bottom: 20px;
+     }
+
+     .producers-list li a {
+          display: flex; 
+          justify-content: center; 
+          align-items: center;
+     }
+     
+     /* product-info */
+     .product-info {
+     background-color: var(--basic-background);
+     }
+     
+     .product-info .container h2 {
+     font-family: Cuprum;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 30px;
+     line-height: 30px;
+     text-transform: uppercase;
+     padding-top: 64px;
+     padding-bottom: 25px;
+     width: 940px;
+     margin-bottom: 0px;
+     }
+     
+     .product-info .container p {
+     font-family: PT Sans;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 13px;
+     line-height: 24px;
+     padding-bottom: 68px;
+     margin: 0px;
+     }
    
 /* MAIN-CATALOG1 */
-
-.catalog-headline {
-width: 940px;
-height: 89px;
-box-sizing: border-box;
-background-color: #F2F6F8;
-
-font-family: Cuprum;
-font-style: normal;
-font-weight: normal;
-font-size: 30px;
-line-height: 30px;
-text-transform: uppercase;
-
-padding-top: 29px;
-padding-left: 29px;
-margin: 0px;
+.navigation-container {
+     display:flex;
+     margin-bottom:20px;
+     margin-top:21px;
 }
 
 .catalog-navigation {
-     height: 59px;
-     margin: 0px;
-         
+     margin: 0px;   
      display: flex;
      justify-content: flex-start;
      align-items: center;
@@ -469,14 +549,14 @@ margin: 0px;
      text-transform: uppercase;
      color: var(--black);
 
-     background-image: url("img/svg-technomart/icon-home.svg");
      background-repeat: no-repeat;
      background-position: 0% 50%, 28px 50%;
      list-style: none;
+     padding-left: 20px;
 }
 
 .catalog-navigation li {
-background-image: url(img/svg-technomart/icon-right-small.svg);
+background-image: url("img/svg-technomart/icon-right-small.svg");
 background-repeat: no-repeat;
 padding-left: 20px;
 background-position: 0px 3px;
@@ -490,6 +570,157 @@ margin: 0px;
 .catalog-navigation a {
      color: var(--black);
 }
+
+.catalog-headline {
+     width: 940px;
+     box-sizing: border-box;
+     background-color: var(--add-background);
+     font-family: Cuprum;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 30px;
+     text-transform: uppercase;
+     padding-top: 29px;
+     padding-left: 29px;
+     padding-bottom: 29px;
+     padding-right: 739px;
+     margin: 0px;
+}
+
+/* checkboxes */
+
+.checkboxes {
+     display: flex;
+     flex-direction: column;
+}
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding-top: 6px;
+  box-sizing: border-box;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 23px;
+  width: 23px;
+  background-color: var( --white);
+  border: solid 2px var( --basic-greylight) 
+}
+
+.checkbox-container:hover input ~ .checkmark {
+  background-color: var( --white);
+  border: solid 2px var( --basic-greylight)
+}
+
+
+.checkbox-container input:checked ~ .checkmark {
+  background-color: var(--white);
+  border:solid 2px var( --basic-greylight)
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-container .checkmark:after {
+  left: 8px;
+  top: -8px;
+  width: 10px;
+  height: 20px;
+  border: solid var( --basic-greylight);
+  border-width: 0 5px 5px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.radio-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: var( --white);;
+  border-radius: 50%;
+  border:solid var( --basic-greylight) 5px;
+  box-sizing:border-box;
+}
+
+.radio-container:hover input ~ .radio-checkmark {
+  background-color: var(--white);
+}
+
+.radio-container input:checked ~ .radio-checkmark {
+  background-color: var( --white);
+}
+
+.radio-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radio-container input:checked ~ .radio-checkmark:after {
+  display: block;
+  background-color: var( --basic-greylight);
+}
+
+.radio-container .radio-checkmark:after {
+     top: 3px;
+     left: 3px;
+     width: 9px;
+     height: 9px;
+     border-radius: 50%;
+     background: var(--white);
+}
+
 
 /* Production */
 .production {
@@ -506,7 +737,6 @@ display: flex;
 
 .products li {
      width: 220px;
-     height: 318px;
      border: solid 1px var(--basic-greylight);
      margin-bottom: 18px;
      text-align: center;
@@ -532,7 +762,7 @@ display: flex;
  }
 
 .card-top {
-     height: 180px;
+     height: 176px;
      width: 100%;
      display: flex;
      flex-direction: column;
@@ -579,10 +809,12 @@ display: flex;
      margin-top: 10px;
      display: none;
 }
+
 .add-bookmarks:hover {
      border: 3px solid var(--navy);
      color: var(--navy);
 }
+
 .add-bookmarks:active {
      border: 3px solid var(--navy);
      color: var(--navy);
@@ -601,9 +833,9 @@ display: flex;
 
 .new-price {
      margin-top: 13px;
+     margin-bottom: 21px;
      display: inline-block;
      width: 141px;
-     height: 38px;
      background-image: url("img/svg-technomart/red-button.svg");
      background-repeat: no-repeat;
      color: var(--white);
@@ -619,28 +851,6 @@ display: flex;
      background-position: top right;
 }
 
-/* product-info */
-.product-info {
-height: 261px;
-background-color: var(--basic-background);
-}
-
-.product-info .container h2 {
-font-family: Cuprum;
-font-style: normal;
-font-weight: normal;
-font-size: 30px;
-line-height: 30px;
-text-transform: uppercase;
-}
-
-.product-info .container p {
-font-family: PT Sans;
-font-style: normal;
-font-weight: normal;
-font-size: 13px;
-line-height: 24px;
-}
 
    /* FOOTER */
    footer {
@@ -662,18 +872,32 @@ line-height: 24px;
    }
    
    .logo-bottom {
-        display: inline-block;
-        width: 220px;
-        height: 68px;
-        background-color: var(--basic-red);
-        box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
-        text-align: center;
+     display: inline-block;
+     background-color: var(--basic-red);
+     text-align: center;
+     margin-bottom: 22px;
+     
+     position: relative;
    }
-   
-   .logo-bottom img {
-   margin-top: 20px;     
-   }
-   
+
+   .logo-bottom::after {
+     content: "";
+     position: absolute;
+     bottom: -5px;
+     left: 0;
+     width: 100%;
+     height: 5px;
+     background-color: #c23f42;
+ }
+
+ .logo-bottom img {
+     padding-top: 24px;
+     padding-bottom: 23px;
+     padding-right: 42px;
+     padding-left: 42px;
+ }
+       
+ 
    .list-top {
         list-style: none;
         display: flex; /*  justify-content: space-between; */
@@ -692,8 +916,7 @@ line-height: 24px;
  
    .list-bottom {
         list-style: none;
-        display: flex;
-       /*  justify-content: space-between; */
+        display: flex; /*  justify-content: space-between; */
          margin-top: 34px;
          justify-content: flex-end;
     }
@@ -706,9 +929,7 @@ line-height: 24px;
         color: var(--special-yellowlight);
    }
    
-  
-   
-   .nav-bottom a:hover {
+ .nav-bottom a:hover {
    text-decoration: underline;
    }
    
@@ -720,7 +941,6 @@ line-height: 24px;
    .logo-address address {
         display: block;
         color: var(--white);
-        margin-top: 22px;
         font-style: normal;
         font-weight: normal;
         font-size: 18px;
@@ -755,7 +975,6 @@ line-height: 24px;
    
    .social-networks a {
         display: block;
-        float: left;
         width: 42px;
         height: 42px;
         border-radius: 100%;
@@ -782,8 +1001,7 @@ line-height: 24px;
         display: flex;
         flex-direction: row;
    }
-  
-   
+     
    .feedback-developed a {
         color: var(--special-yellowlight);
    }
@@ -795,4 +1013,10 @@ line-height: 24px;
         margin-left: 51px;
    }
    
-   
+   .navigation-home {
+     background-image: url("img/svg-technomart/icon-home.svg");
+     padding-left: 15px;
+     background-repeat: no-repeat;
+    background-position: 0px;
+   }
+
