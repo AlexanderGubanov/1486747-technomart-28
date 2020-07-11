@@ -6,6 +6,8 @@ var modalForm = modalWrite.querySelector(".modal-form");
 var yourName = modalWrite.querySelector("[name=your-name]");
 var yourMail = modalWrite.querySelector("[name=your-mail]");
 
+var mapLink = document.querySelector(".map");
+var modalMap = document.querySelector(".modal-map");
 
 var isStorageSupport = true;
 var storage = "";
@@ -50,3 +52,12 @@ window.addEventListener("keydown", function (evt) {
   }
 });
 
+mapLink.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  modalMap.classList.add("modal-show");
+});
+
+modalClose.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  modalMap.classList.remove("modal-show");
+});

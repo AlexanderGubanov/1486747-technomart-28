@@ -545,15 +545,19 @@ width: 478px;
 /* modal-close */
 .modal-close {
           position: absolute;
-          top: 10px;
-          right: 10px;
+          top: 21px;
+          right: -69px;
           
           width: 21px;
           height: 21px;
           border: 0;
           cursor: pointer;
+          background-color: transparent;
+          background-image: url("img/svg-technomart/icon-close.svg"); 
+          background-repeat: no-repeat;
         }
 
+/*
 .modal-close::before,
 .modal-close::after {
   content: "";
@@ -572,7 +576,7 @@ width: 478px;
    .modal-close::after {
      transform: rotate(-45deg);
    }
-   
+ */  
 
 
      .modal-map {
@@ -1202,4 +1206,9 @@ display: flex;
 
    .modal-show {
      display: block;
+   }
+
+   .relative {
+position: relative;
+
    }
