@@ -26,16 +26,18 @@
         <div class="container-flex-spacebetween header-contact-container"> <!-- header-contact container -->
           <p class="shop-description">
             Интернет-магазин<br>
-            строительных материалов </br>
+            строительных материалов <br>
             и инструментов для ремонта
           </p>
         <div>
 
 
 
-            <a class="phone" href="#">
-            +7(812)555-05-55
-            </a>
+          <a class="phone" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19"><path fill="#B7BFC8" d="M15.572 18.985h-.941c-4.129-.488-7.157-2.408-9.359-4.864C3.062 11.66 1.318 8.492.978 4.228V3.084c.078-.774.459-1.304.898-1.757C2.425.766 3.25.044 4.002.019c.554-.018 1.5.38 1.879.899.329.446.504 1.339.656 2.003.154.671.505 1.643.408 2.289-.148 1.007-1.487 1.434-1.879 2.166 1.307 3.135 3.443 5.439 6.293 7.031.715-.392 1.346-1.572 2.332-1.595.359-.009.818.178 1.184.286.402.121.75.275 1.104.408.596.224 1.648.521 2.004 1.021.365.513.57 1.356.49 1.879-.164 1.041-1.879 2.197-2.901 2.579z"/></svg>
+
+          +7(812)555-05-55
+          </a>
 
           <address>г. Санкт Петербург, ул. Б. Конюшенная, д.19/8</address>
         </div>
@@ -56,7 +58,7 @@
 
       <nav>
         <ul class="navigation-list">
-          <li><a href="blank.html">Главная</a></li>
+          <li><a href="index.html">Главная</a></li>
           <li><a href="blank.html">Компания</a></li>
           <li><a href="catalog1.html">Каталог</a></li>
           <li><a href="blank.html">Новости</a></li>
@@ -67,7 +69,8 @@
       </nav>
     </div>
     </header>
-    <main>
+
+      <main>
       <div class="container">
         <div class="navigation-container">
         <a class="navigation-home" href="index.html"></a>
@@ -80,12 +83,15 @@
       <h1 class="catalog-headline">Перфораторы</h1>
       <div class="production">
         <section>
-        <h2>Фильтр:</h2>
-        <form action="#" method="post">
-          <h3>Цена</h3>
-          <label><input type="range" min="0" max="300" step="10" value="250"><br>
-          0 - 300</label>
-          <h3>Производители:</h3>
+        <h2 class="filter-header">Фильтр:</h2>
+        <form class="catalog-filters" action="#" method="post">
+          <h3 class="price-title">Цена</h3>
+          <label class="price-range"><input type="range" min="0" max="3000" step="10" value="250"><br>
+         </label>
+         <div class="price-legend">
+         <span class="price-limit">0</span> <span>-</span> <span class="price-limit">30000</span>
+        </div>
+          <h3 class="filters-title">Производители:</h3>
           <div class="checkboxes">
           <label class="checkbox-container">
             <input type="checkbox" name="Bosh" checked>Bosh
@@ -104,26 +110,28 @@
             <span class="checkmark"></span>
           </label>
           </div>
-          <h3>Питание:</h3>
+          <h3 class="filters-title" >Питание:</h3>
           <label class="radio-container">
             <input type="radio" name="power" value="Аккумуляторные" checked>Аккумуляторные
             <span class="radio-checkmark"></span>
           </label>
-          <label class="radio-container"
-          ><input type="radio" name="power" value="Сетевые">Сетевые
+          <label class="radio-container">
+            <input type="radio" name="power" value="Сетевые">Сетевые
           <span class="radio-checkmark"></span>
         </label>
         </form>
-        <button>Показать</button>
+        <button class="show">Показать</button>
       </section>
       <section>
-        <div>
-          <h2>Сортировка:</h2>
-          <button>По цене</button>
-          <button>По типу</button>
-          <button>По функционалу</button>
-          <button>Вверх</button> <!--Заменить слова иконками-->
-          <button>Вниз</button>
+        <div class="sorting">
+          <h2 class="sorting-header">Сортировка:</h2>
+          <div class="sorting-options">
+          <button class="sorting-option-selected">По цене</button>
+          <button class="sorting-option sorting-type">По типу</button>
+          <button class="sorting-option">По функционалу</button>
+          <button class="sorting-up-selected"></button> 
+          <button class="sorting-down"></button>
+        </div>
         </div>
         <ul class="products">
           <li>
@@ -216,17 +224,17 @@
           </li>
         </ul>
 
-        <ul>
-          <li>
+        <ul class="pages">
+          <li class="this-page">
             <a>1</a>
           </li>
-          <li>
+          <li class="page">
             <a href="blank.html">2</a>
           </li>
-          <li>
+          <li class="page">
             <a href="blank.html">3</a>
           </li>
-          <li>
+          <li class="next-page">
             <a href="blank.html">Следующая</a>
           </li>
         </ul>
@@ -299,11 +307,10 @@
   </body>
 </html>
 
-<div class="popup">
-  <img src="#" alt=""> <!--Добавить иконку галочки-->
+<div class="modal-add-basket">
   Товар добавлен в корзину
-  <button class="close"><img src="#" alt="Закрыть"></button> <!--Добавить иконку крестика-->
+  <button class="close"><img src="#" alt="Закрыть"></button> 
   <div><a href="blank.html">Оформить заказ</a>
-    <a href="blank.html">Продолжить покупки</a>
+    <a href="catalog1.html">Продолжить покупки</a>
   </div>
 </div>
