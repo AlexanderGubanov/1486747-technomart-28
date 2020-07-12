@@ -68,73 +68,97 @@
 
     <div class="container">
 
-        <div>Материалы
-          <a href="blank-html">На любой вкус</a>
-        </div>
-        <div>Инструмент
-          <a href="blank-html">На все случаи</a>
-        </div>
-        <div>Техника
-          <a href="blank-html">Для стройки</a>
-        </div>
-        <div>Скидки 50%
-          <a href="blank-html">На 350 товаров</a>
-        </div>
-        <div>Доставка
-          <a href="blank-html">Бесплатно</a>
-        </div>
-        <div class="slider">
-          <ul class="slider-items">
-            <li class="slider-item">
-              <span>Перфораторы Настоящие мужские игрушки</span>
-              <img src="#" alt="">
-              <a href="catalog1.html">Открыть каталог</a>
-            </li>
-            <li class="slider-item">
-              <span>Перфораторы Настоящие мужские игрушки</span>
-              <img src="#" alt="">
-              <a href="catalog1.html">Открыть каталог</a>
-            </li>
+      <section class="offers-section">
+        <ul class="offers offers-row">
+          <li class="offer materials">
+            <p>Материалы</p>
+            <a href="blank-html">На любой вкус</a>
+          </li>
+          <li class="offer instrument">
+            <p>Инструмент</p>
+            <a href="blank-html">На все случаи</a>
+          </li>
+          <li class="offer techniс nomargin">
+            <p>Техника</p>
+            <a href="blank-html">Для стройки</a>
+          </li>
           </ul>
+          <div class="offers-row">
+  
+            <div class="slider">
+              <div class="slider-item perforators">
+                <div class="title-container">
+                  <p>Перфораторы </p>
+                  <span>Настоящие мужские игрушки</span>
+                </div>
+                <a href="catalog1.html">Открыть каталог</a>
+              </div>
+              <div class="slider-item drills">
+                <div class="title-container">
+                  <p>Дрели</p>
+                  <span>Соседям на радость!</span>
+                </div>
+                <a href="catalog1.html">Открыть каталог</a>
+              </div>
+          </div>
+  
+          <ul class="offers">
+          <li class="offer discounts">
+            <p>Скидки 50%</p>
+            <a href="blank-html">На 350 товаров</a>
+          </li>
+          <li class="offer offer-delivery">
+            <p>Доставка</p>
+            <a href="blank-html">Бесплатно</a>
+          </li>
+        </ul>
+          
         </div>
-        <button type="button" disabled>Назад</button><!--Заменить слова галочками-->
-        <button type="button">Вперед</button>
+      </section>
       
       <section>
         <div class="popular goods">
           <h2>Популярные товары</h2>
           <a href="blank.html">Все популярные товары</a>
         </div>
-        <ul class="">
+        <ul class="popular-products">
           <li>
-            <img src="img/bfg9000.png" alt="Перфоратор">
+            <div class="card-top">
+              <img src="img/bfg9000.png" alt="Перфоратор">
+              <a class="buy" href="blank.html">Купить</a>
+              <a class="add-bookmarks" href="blank.html">В закладки</a>
+              </div>
             <h3 class="product">Перфоратор BOSH BFG9000</h3>
-            <a href="blank.html">Купить</a>
-            <a href="blank.html">В закладки</a>
             <span class="old-price">32500Р.</span>
             <span class="new-price">25500Р.</span>
           </li>
           <li>
-            <img src="img/bfg3000.png" alt="Перфоратор">
+            <div class="card-top">
+              <img src="img/bfg3000.png" alt="Перфоратор">
+              <a class="buy" href="blank.html">Купить</a>
+              <a class="add-bookmarks" href="blank.html">В закладки</a>
+              </div>
             <h3 class="product">Перфоратор BOSH BFG3000</h3>
-            <a href="blank.html">Купить</a>
-            <a href="blank.html">В закладки</a>
             <span class="old-price">22500Р.</span>
             <span class="new-price">15500Р.</span>
           </li>
           <li>
-            <img src="img/bfg6000.png" alt="Перфоратор">
+            <div class="card-top">
+              <img src="img/bfg6000.png" alt="Перфоратор">
+              <a class="buy" href="blank.html">Купить</a>
+              <a class="add-bookmarks" href="blank.html">В закладки</a>
+              </div>
             <h3 class="product">Перфоратор BOSH BFG6000</h3>
-            <a href="blank.html">Купить</a>
-            <a href="blank.html">В закладки</a>
             <span class="old-price">30500Р.</span>
             <span class="new-price">25500Р.</span>
           </li>
           <li>
-            <img src="img/bfg2000.png" alt="Перфоратор">
+            <div class="card-top">
+              <img src="img/bfg2000.png" alt="Перфоратор">
+              <a class="buy" href="blank.html">Купить</a>
+              <a class="add-bookmarks" href="blank.html">В закладки</a>
+              </div>
             <h3 class="product">Перфоратор BOSH BFG2000</h3>
-            <a href="blank.html">Купить</a>
-            <a href="blank.html">В закладки</a>
             <span class="new-price">12500Р.</span>
           </li>
         </ul>
@@ -182,12 +206,12 @@
         </p>
         <div class="services-types">
         <ul class="services-list">
-          <li><button class="delivery">Доставка</button></li>
-          <li><button class="guarantee">Гарантия</button></li>
-          <li><button class="credit">Кредит</button></li>
+          <li><button class="button-default button-choosen delivery">Доставка</button></li>
+          <li><button class="button-default guarantee">Гарантия</button></li>
+          <li><button class="button-default credit">Кредит</button></li>
         </ul>
         
-        <div class="modal modal-delivery">
+        <div class="modal modal-delivery modal-show">
           <h3>Доставка</h3>
           <p>Мы с удовольствием доставим ваш товар прямо <br>
             к вашему подъезду совершенно бесплатно!<br>

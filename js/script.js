@@ -16,6 +16,9 @@ var modalDelivery = document.querySelector(".modal-delivery");
 var modalGuarantee = document.querySelector(".modal-guarantee");
 var modalCredit = document.querySelector(".modal-credit");
 
+var buttonChoosen = document.querySelector(".button-choosen");
+var buttonDefault = document.querySelector(".button-default");
+
 var isStorageSupport = true;
 var storage = "";
 
@@ -72,23 +75,38 @@ modalClose.addEventListener("click", function (evt) {
 // services
 linkDelivery.addEventListener("click", function (evt) {     
   evt.preventDefault();
-  modalDelivery.classList.add("modal-show");
+  modalDelivery.classList.add("modal-show"); 
+  linkDelivery.classList.add("button-choosen");
+
   modalCredit.classList.remove("modal-show");
+  linkCredit.classList.remove("button-choosen");
+
   modalGuarantee.classList.remove("modal-show");
+  linkGuarantee.classList.remove("button-choosen");
 });
   
 linkGuarantee.addEventListener("click", function (evt) {     
   evt.preventDefault();     
   modalGuarantee.classList.add("modal-show");
+  linkGuarantee.classList.add("button-choosen");
+
   modalDelivery.classList.remove("modal-show");
+  linkDelivery.classList.remove("button-choosen");
+  
   modalCredit.classList.remove("modal-show");
+  linkCredit.classList.remove("button-choosen");
 });
 
 linkCredit.addEventListener("click", function (evt) {     
   evt.preventDefault();     
   modalCredit.classList.add("modal-show");
+  linkCredit.classList.add("button-choosen");
+
   modalGuarantee.classList.remove("modal-show");
+  linkGuarantee.classList.remove("button-choosen");
+
   modalDelivery.classList.remove("modal-show");
+  linkDelivery.classList.remove("button-choosen");
 });
 
   

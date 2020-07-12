@@ -463,6 +463,167 @@
    
    /* MAIN */
    /* MAIN-INDEX */
+/*   offers-section */
+
+   .offers {
+     list-style: none;
+     padding: 0px;
+     margin: 0px;
+}
+
+.offers li {
+     width: 300px;
+     height: 123px;
+     padding: 20px 23px;
+     box-sizing: border-box;
+     margin-bottom: 20px;
+}
+
+.offer p {
+     font-family: "Cuprum";
+     font-style: normal;
+     font-weight: bold;
+     font-size: 24px;
+     margin: 0px;
+     color: var(--white);
+}
+
+.offer a{
+     display: flex;
+     width: 135px;
+     height: 38px;
+     box-sizing: border-box;
+     background-color: rgba(255,255,255,0.3);
+     justify-content: center;
+     align-items: center;
+     color: var(--white);
+     margin-top: 14px;
+}
+
+.offer a:hover{
+     background-color: rgba(197, 197, 197, 0.3);
+}
+.offer a:active{
+     background-color: rgba(169, 169, 169, 0.3);
+}
+
+
+.materials{
+     background-color: var(--special-yellow);
+     background-image: url("img/svg-technomart/icon-1.svg"), url("img/svg-technomart/catalog-new.svg");;
+     background-repeat: no-repeat;
+     background-position: 213px center, top right;
+}
+
+
+.instrument{
+     background-color: var(--special-blue);
+     background-image: url("img/svg-technomart/icon-2.svg");
+     background-repeat: no-repeat;
+     background-position: 194px center;
+}
+
+.techniс{
+     background-color: var(--special-lilac);
+     background-image: url("img/svg-technomart/icon-3.svg");
+     background-repeat: no-repeat;
+     background-position: 191px center;
+}
+
+.discounts{
+     background-color: var(--special-greenlight);
+     background-image: url("img/svg-technomart/icon-4.svg");
+     background-repeat: no-repeat;
+     background-position: 196px center;
+}
+
+.offer-delivery {
+     background-color: var(--special-yellow);
+     background-image: url("img/svg-technomart/icon-5.svg");
+     background-repeat: no-repeat;
+     background-position: 191px center;
+}
+
+.slider{
+     padding: 0px;
+     margin: 0px;
+     box-sizing: border-box;
+}
+
+.slider-item{
+     width: 620px;
+     height: 266px;
+     box-sizing: border-box;
+}
+
+.title-container{
+     height: 104px;
+     background: rgba(0, 0, 0, 0.25);
+     padding-left: 24px;
+     padding-top: 23px;
+     box-sizing: border-box;
+}
+
+.title-container p{
+     font-family: "Cuprum";
+     font-style: normal;
+     font-weight: bold;
+     font-size: 36px;
+     color: var(--white);
+     text-transform: uppercase;
+     margin-top: 0px;
+     margin-bottom: 5px;
+}
+
+.title-container span{
+     color: var(--white);
+     font-family: "Cuprum";
+     font-style: normal;
+     font-weight: normal;
+     font-size: 18px;
+}
+
+.slider-item a{
+     display: inline-block;
+     font-family: "Cuprum";
+     font-style: normal;
+     font-weight: normal;
+     font-size: 14px;
+     width: 192px;
+     height: 38px;
+     background-color: var(--basic-red);
+     color: var(--white);
+     box-sizing: border-box;
+     line-height: 38px;
+     text-align: center;
+     margin-top: 97px;
+     margin-left: 24px;
+}
+
+.slider-item a:active{
+     background-color: var(--error);
+}
+
+.perforators{
+     background-image: url(img/svg-technomart/perforators.png);
+}
+.drills{
+     background-image: url(img/svg-technomart/drills.png);
+     display:none;
+}
+
+.offers-row{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+}
+
+.offers-section{
+     margin-bottom: 39px;
+     margin-top: 59px;
+}
+
+
 /* producers */
 .popular {
      width: 940px;
@@ -548,7 +709,6 @@ line-height: 24px;
      padding-top: 64px;
 }
 
-
 .services-types {
      display: flex;
      justify-content: space-between;
@@ -575,9 +735,7 @@ line-height: 24px;
      left: 230px;            
       }
 
-
-
-.services-list li button {
+.button-default {
 width: 240px;
 height: 61px;
 text-align: left;
@@ -589,27 +747,47 @@ font-size: 21px;
 line-height: 30px;
 
 border: none;
+outline: none;
 background: #32425C;
 box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
 
 color: var(--white);
-
 }
 
-.services-list li button:hover {
+.button-default:not(.button-choosen):hover {
 background: #293449;
 box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
 color: var(--white);
+outline: none;
 }
 
 .services-list li button:active {
      background: var(--white);
      box-shadow: 0px 1px 0px #FFFFFF, inset 0px 1px 0px #FFFFFF;
      color: #32425C;
+     outline: none;
 }
 
 /* modal */
-
+.button-choosen {
+          width: 240px;
+          height: 61px;
+          text-align: left;
+          
+          font-family: Cuprum;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 21px;
+          line-height: 30px;
+          
+          border: none;
+          outline: none;
+          background: var(--white);
+          box-shadow: 0px 1px 0px #FFFFFF, inset 0px 1px 0px #FFFFFF;
+          
+          color: #32425C;
+          }
+          
 .modal {
      display: none;
      position: fixed;
@@ -645,6 +823,8 @@ margin-top: 0px;
      position: relative;
      background-position: right bottom;
      }
+
+
 
 .modal-delivery {
      background-image: url("img/delivery.png");
