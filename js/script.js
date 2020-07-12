@@ -9,6 +9,13 @@ var yourMail = modalWrite.querySelector("[name=your-mail]");
 var mapLink = document.querySelector(".map");
 var modalMap = document.querySelector(".modal-map");
 
+var linkDelivery = document.querySelector(".delivery");
+var linkGuarantee = document.querySelector(".guarantee");
+var linkCredit = document.querySelector(".credit");
+var modalDelivery = document.querySelector(".modal-delivery");
+var modalGuarantee = document.querySelector(".modal-guarantee");
+var modalCredit = document.querySelector(".modal-credit");
+
 var isStorageSupport = true;
 var storage = "";
 
@@ -61,3 +68,27 @@ modalClose.addEventListener("click", function (evt) {
   evt.preventDefault();
   modalMap.classList.remove("modal-show");
 });
+
+// services
+linkDelivery.addEventListener("click", function (evt) {     
+  evt.preventDefault();
+  modalDelivery.classList.add("modal-show");
+  modalCredit.classList.remove("modal-show");
+  modalGuarantee.classList.remove("modal-show");
+});
+  
+linkGuarantee.addEventListener("click", function (evt) {     
+  evt.preventDefault();     
+  modalGuarantee.classList.add("modal-show");
+  modalDelivery.classList.remove("modal-show");
+  modalCredit.classList.remove("modal-show");
+});
+
+linkCredit.addEventListener("click", function (evt) {     
+  evt.preventDefault();     
+  modalCredit.classList.add("modal-show");
+  modalGuarantee.classList.remove("modal-show");
+  modalDelivery.classList.remove("modal-show");
+});
+
+  

@@ -482,7 +482,7 @@
      margin-right: 30px;
 }
 
-.popular a, .write-to-us, .company a {
+.popular a, .write-to-us, .company a, .modal-credit a {
      color: var(--white);
      background-color: var(--basic-red);
      
@@ -525,6 +525,15 @@ padding: 11px 0 9px 0;
           align-items: center;
      }
 
+     .producers-list li a:hover {
+     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+     }
+
+     .producers-list li a:active {
+          opacity: 0.5;
+          box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+     }
+     
 /* services */
 .services {
 background-color: var(--basic-background);
@@ -543,16 +552,30 @@ line-height: 24px;
 .services-types {
      display: flex;
      justify-content: space-between;
+     margin-top: 70px;
 }
 
 .services-list {
      width: 240px;
      list-style: none;
-     margin-top: 70px;
-     padding-bottom: 99px;
      padding-left: 0px;
-     
+     margin: 0px;
+     position: relative;
 }
+
+.services-list::after {
+     content: "";
+     width: 10px;      
+     height: 279px;
+     background-image: url("img/right-line.png");
+     background-repeat: no-repeat;
+
+     position: absolute;
+     top: -48px;
+     left: 230px;            
+      }
+
+
 
 .services-list li button {
 width: 240px;
@@ -580,42 +603,64 @@ color: var(--white);
 }
 
 .services-list li button:active {
-     background: #FFFFFF;
+     background: var(--white);
      box-shadow: 0px 1px 0px #FFFFFF, inset 0px 1px 0px #FFFFFF;
      color: #32425C;
 }
 
 /* modal */
 
+.modal {
+     display: none;
+     position: fixed;
+     top: 10%;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     margin: auto;
+     z-index: 2;
+}
+
 .services h3 {
-     font-family: Cuprum;
+font-family: Cuprum;
 font-style: normal;
 font-weight: normal;
 font-size: 30px;
 line-height: 30px;
 text-transform: uppercase;
 color: #32425C;
+margin-top: 0px;
 }
 
-.modal-delivery {
+.services-list button {
+     cursor: pointer;
+}
+
+.services .modal {
      width: 619px;
      height: 283px;
-     margin-top: 40px;
-     background-image: url("img/delivery.png");
+     margin-top: 0px;
+     
      background-repeat: no-repeat;
-     background-size: 100%;
+     position: relative;
+     background-position: right bottom;
+     }
 
+.modal-delivery {
+     background-image: url("img/delivery.png");
 }
 
 .modal-guarantee {
+     background-image: url("img/guarantee.png");
+     }
 
+.modal-credit {
+     background-image: url("img/credit.png");
+     }
+
+.modal-credit a {
+     margin-top: 20px;
 }
-
-.modal-cfedit {
-
-}
-
-
 
 /* company */
 .company, .contacts {
@@ -700,16 +745,7 @@ margin-top: 32px;
 
 /* modal */
 /* modal-map */
-.modal {
-     display: none;
-     position: fixed;
-     top: 10%;
-     right: 0;
-     bottom: 0;
-     left: 0;
-     margin: auto;
-     z-index: 2;
-}
+
 
 
 /* modal-close */
@@ -1737,6 +1773,7 @@ position: relative;
       list-style: none;
       padding-left: 0px;
       color: var(--black);
+      margin-top: 48px;
  }
  .pages a {
       color: var(--black);
