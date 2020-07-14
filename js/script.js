@@ -19,6 +19,10 @@ var modalCredit = document.querySelector(".modal-credit");
 var buttonChoosen = document.querySelector(".button-choosen");
 var buttonDefault = document.querySelector(".button-default");
 
+var linkBuy = document.querySelectorAll(".buy");
+var modalBasket = document.querySelector(".modal-add-basket");
+
+
 var isStorageSupport = true;
 var storage = "";
 
@@ -109,4 +113,11 @@ linkCredit.addEventListener("click", function (evt) {
   linkDelivery.classList.remove("button-choosen");
 });
 
-  
+  // checkout
+  linkBuy.addEventListener("click", function (evt) {     
+    evt.preventDefault();     
+    modalBasket.classList.add("modal-show");
+  }); 
+
+
+

@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
-    <link href="normalize.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -84,7 +84,7 @@
       <div class="production">
         <section>
         <h2 class="filter-header">Фильтр:</h2>
-        <form class="catalog-filters" action="#" method="post">
+        <form class="catalog-filters" action="https://echo.htmlacademy.ru/" method="post">
           <h3 class="price-title">Цена</h3>
           <label class="price-range"><input type="range" min="0" max="3000" step="10" value="250"><br>
          </label>
@@ -96,7 +96,7 @@
           <label class="checkbox-container">
             <input type="checkbox" name="Bosh" checked>Bosh
             <span class="checkmark"></span>
-          </label class="checkbox-container">
+          </label>
           <label class="checkbox-container"><input type="checkbox" name="Interscol">Интерскол
             <span class="checkmark"></span>
           </label>
@@ -119,8 +119,9 @@
             <input type="radio" name="power" value="Сетевые">Сетевые
           <span class="radio-checkmark"></span>
         </label>
+        <input type="submit" name="show" class="show-button" value="Показать">  
         </form>
-        <button class="show">Показать</button>
+        
       </section>
       <section>
         <div class="sorting">
@@ -207,7 +208,7 @@
             <div class="card-top">
             <img src="img/bfg6000.png" alt="Перфоратор">
             <a class="buy" href="blank.html">Купить</a>
-            <a cass="add-bookmarks" href="blank.html">В закладки</a>
+            <a class="add-bookmarks" href="blank.html">В закладки</a>
             </div>
             <h3 class="product">Перфоратор BOSH BFG6000</h3>
             <span class="old-price">30500Р.</span>
@@ -309,7 +310,7 @@
         </ul>
           <div class="feedback-developed">
         <p class="feedback">Обратная связь: <br><a href="#">mail@htmlacademy.ru</a></p>
-        <p class="developed">Разработано — <br><a href="blank.html">htmlacademy.ru</a></p>
+        <p class="developed">Разработано — <br><a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
           </div>
         </div>
       </div>
