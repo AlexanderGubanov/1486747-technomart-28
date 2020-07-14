@@ -73,8 +73,9 @@
       <main>
       <div class="container">
         <div class="navigation-container">
-        <a class="navigation-home" href="index.html"></a>
+        
         <ul class="catalog-navigation">
+        <li><a class="navigation-home" href="index.html"></a></li>
         <li><a href="blank.html">Каталог</a></li>
         <li><a href="blank.html">Инстурмент</a></li>
         <li>Перфораторы</li>
@@ -82,10 +83,11 @@
     </div>
       <h1 class="catalog-headline">Перфораторы</h1>
       <div class="production">
-        <section>
-        <h2 class="filter-header">Фильтр:</h2>
+        <section class="filter">
+        <h2>Фильтр:</h2>
         <form class="catalog-filters" action="https://echo.htmlacademy.ru/" method="post">
-          <h3 class="price-title">Цена</h3>
+          <div class="filter-price">
+          <h3>Цена:</h3>
           <div class="price-range">
             <div class="slider-controller-left"></div>
             <div class="slider-controller-right"></div>
@@ -93,11 +95,12 @@
               <div class="slider-range"></div>
             </div>
          </div>
-         <div class="price-legend">
+        </div>
+        <div class="price-legend">
          <span class="price-limit">0</span> <span>-</span> <span class="price-limit">30000</span>
         </div>
-          <h3 class="filters-title">Производители:</h3>
-          <div class="checkboxes">
+        <div class="filter-producers">
+          <h3>Производители:</h3>
           <label class="checkbox-container">
             <input type="checkbox" name="Bosh" checked>Bosh
             <span class="checkmark"></span>
@@ -114,8 +117,9 @@
           <label class="checkbox-container"><input type="checkbox" name="Hitachi">Hitachi
             <span class="checkmark"></span>
           </label>
-          </div>
-          <h3 class="filters-title" >Питание:</h3>
+        </div>
+        <div class="filter-energy">
+          <h3>Питание:</h3>
           <label class="radio-container">
             <input type="radio" name="power" value="Аккумуляторные" checked>Аккумуляторные
             <span class="radio-checkmark"></span>
@@ -124,6 +128,7 @@
             <input type="radio" name="power" value="Сетевые">Сетевые
           <span class="radio-checkmark"></span>
         </label>
+      </div>
         <input type="submit" name="show" class="show-button" value="Показать">  
         </form>
         
@@ -140,7 +145,7 @@
         </div>
         </div>
         <ul class="products">
-          <li>
+          <li class="catalog-item">
             <div class="card-top">
             <img src="img/bfg6000.png" alt="Перфоратор">
             <a class="buy" href="blank.html">Купить</a>
@@ -150,7 +155,7 @@
             <span class="old-price">30500Р.</span>
             <span class="new-price">25500Р.</span>
           </li>
-          <li>
+          <li class="catalog-item">
             <div class="card-top">
             <img src="img/bfg6000.png" alt="Перфоратор">
             <a class="buy" href="blank.html">Купить</a>
@@ -160,7 +165,7 @@
             <span class="old-price">30500Р.</span>
             <span class="new-price">25500Р.</span>
           </li>
-          <li class="catalog-new">
+          <li class="catalog-item catalog-new">
             <div class="card-top">
             <img src="img/bfg6000.png" alt="Перфоратор">
             <a class="buy" href="blank.html">Купить</a>
@@ -170,7 +175,7 @@
             <span class="old-price">30500Р.</span>
             <span class="new-price">25500Р.</span>
           </li>
-          <li class="catalog-new">
+          <li class="catalog-item catalog-new">
             <div class="card-top">
             <img src="img/bfg3000.png" alt="Перфоратор">
             <a class="buy" href="blank.html">Купить</a>
@@ -180,7 +185,7 @@
             <span class="old-price">22500Р.</span>
             <span class="new-price">15500Р.</span>
           </li>
-          <li>
+          <li class="catalog-item">
             <div class="card-top">
             <img src="img/bfg6000.png" alt="Перфоратор">
             <a class="buy" href="blank.html">Купить</a>
@@ -190,7 +195,7 @@
             <span class="old-price">30500Р.</span>
             <span class="new-price">25500Р.</span>
           </li>
-          <li class="catalog-new">
+          <li class="catalog-item catalog-new">
             <div class="card-top">
             <img src="img/bfg2000.png" alt="Перфоратор">
             <a class="buy" href="blank.html">Купить</a>
@@ -199,7 +204,7 @@
             <h3 class="product">Перфоратор BOSH BFG2000</h3>
             <span class="new-price">12500Р.</span>
           </li>
-          <li class="catalog-new">
+          <li class="catalog-item catalog-new">
             <div class="card-top">
             <img src="img/bfg3000.png" alt="Перфоратор">
             <a class="buy" href="blank.html">Купить</a>
@@ -209,7 +214,7 @@
             <span class="old-price">22500Р.</span>
             <span class="new-price">15500Р.</span>
           </li>
-          <li>
+          <li class="catalog-item">
             <div class="card-top">
             <img src="img/bfg6000.png" alt="Перфоратор">
             <a class="buy" href="blank.html">Купить</a>
@@ -219,7 +224,7 @@
             <span class="old-price">30500Р.</span>
             <span class="new-price">25500Р.</span>
           </li>
-          <li class="catalog-new">
+          <li class="catalog-item catalog-new">
             <div class="card-top">
             <img src="img/bfg2000.png" alt="Перфоратор">
             <a class="buy" href="blank.html">Купить</a>
@@ -257,16 +262,7 @@
       </div>
       </section>
 
-      <div class="modal modal-add-basket">
-        <div class="basket-container relative">
-          <button class="modal-close" type="button" aria-label="Закрыть"></button>  
-          <span>Товар добавлен в корзину</span>
-        </div>
-        <div class="modal-buttons">
-          <a class="modal-checkout" href="blank.html">Оформить заказ</a>
-          <a class="modal-continue-shopping" href="catalog1.html">Продолжить покупки</a>
-        </div>
-      </div>
+
 
           </main>
     <footer>
@@ -321,6 +317,18 @@
       </div>
 
     </footer>
+
+    <div class="modal modal-add-basket">
+      <div class="basket-container relative">
+        <button class="modal-close" type="button" aria-label="Закрыть"></button>  
+        <span>Товар добавлен в корзину</span>
+      </div>
+      <div class="modal-buttons">
+        <a class="modal-checkout" href="blank.html">Оформить заказ</a>
+        <a class="modal-continue-shopping" href="catalog1.html">Продолжить покупки</a>
+      </div>
+    </div>
+
   </body>
 
   </html>
