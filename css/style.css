@@ -568,6 +568,18 @@ text-transform: uppercase;
      box-sizing: border-box;
 }
 
+.button-back {
+	position: relative;
+	left: 12px;
+	top: -20%;
+}
+
+.button-forward {
+	position: relative;
+	left: 560px;
+	top: -20%;
+}
+
 .title-container p {
      font-family: "Cuprum";
      font-style: normal;
