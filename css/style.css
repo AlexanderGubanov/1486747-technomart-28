@@ -612,11 +612,12 @@ text-transform: uppercase;
 }
 
 .perforators {
-     background-image: url("../img/perforators.png");
+     background-image: url("../img/perforators.jpg");
+        
 }
 
 .drills {
-     background-image: url("../img/drills.png");
+     background-image: url("../img/drills.jpg");
      display: none;
 }
 
@@ -1386,6 +1387,7 @@ display: flex;
      text-align: center;
      line-height: 38px;
      color: var(--white);
+     text-transform: uppercase;
      display: none;
 }
 
@@ -1414,6 +1416,7 @@ display: flex;
      line-height: 32px;
      color: var(--navy);
      margin-top: 10px;
+     text-transform: uppercase;
      display: none;
 }
 
@@ -1645,19 +1648,15 @@ display: flex;
 
 
    /* НОВОЕ */
-
-
-
-   .modal-show {
+.modal-show {
      display: block;
    }
 
    .relative {
 position: relative;
-
    }
 
-   .popular-products {
+ .popular-products {
      display: flex;
      flex-wrap: wrap;
      justify-content: space-between;
@@ -1676,7 +1675,6 @@ position: relative;
      align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    
 }
 
 .product{
@@ -1700,7 +1698,7 @@ position: relative;
      width: 127px;
  }
 
- .filter-header{
+ .filter-header {
      font-style: normal;
      font-weight: normal;
      font-size: 13px;
@@ -1719,49 +1717,63 @@ position: relative;
       font-family: "PT Sans";
  }
 
- .price-range{
-     display: block;
+ .price-range {
      background-color: var(--creamy);
      margin-right: 21px;
-     padding-top: 31px;
-     padding-bottom: 31px;
-     padding-left: 18px;
+     width: 220px;
+     height: 80px;
      margin-bottom: 10px;
      width: 220px;
      box-sizing: border-box;
- }
-
-     input[type='range'] {
-      height:2px;
-      -webkit-appearance: none;
-      background-color: var(--soft-green);
-      border: 0;
-      outline: 0;
-    }
-
-    input[type='range']::-webkit-slider-thumb {
-     width: 20px;
-     -webkit-appearance: none;
-     height: 20px;
-     cursor: ew-resize;
-     background: var(--white);
-     border-radius: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
      position: relative;
-   }
-
-   
- .price-range input{
-      width: 180px;
  }
 
- .price-legend{
+ .slider-path {
+     width: 180px;
+     height: 2px;
+     background-color: #D7DCDE;
+}
+
+.slider-range {
+     width: 152px;
+     height: 2px;
+     background-color: var(--soft-green);
+}
+
+.slider-controller-left {
+    position: absolute;
+    top: 30px;
+    left: 18px;
+    width: 4px;
+    height: 4px;
+    border: 8px solid var(--white);
+    background-color: #ababab;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.slider-controller-right {
+     position: absolute;
+    top: 30px;
+    left: 160px;
+    width: 4px;
+    height: 4px;
+    border: 8px solid var(--white);
+    background-color: #ababab;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.price-legend {
      display: flex;
      justify-content: space-between;
      margin-right: 21px;
      align-items: center;
  }
 
- .price-limit{
+ .price-limit {
      font-style: normal;
      font-weight: normal;
      font-size: 17px;
@@ -1774,8 +1786,7 @@ position: relative;
      justify-content: center;
  }
 
-
- .price-title{
+ .price-title {
      margin-left: 0px;
      margin-top: 20px;
      margin-bottom: 20px;
@@ -1785,7 +1796,7 @@ position: relative;
      text-transform: uppercase;
  }
 
- .filters-title{
+ .filters-title {
      border-top: solid var(--light-grey) 1px;
      margin-left: 0px;
      margin-top: 26px;
@@ -1798,7 +1809,7 @@ position: relative;
      font-family: 'PT Sans';
  }
 
- .sorting{
+ .sorting {
       display:flex;
       justify-content: space-between;
       align-items: center;
@@ -1809,7 +1820,7 @@ position: relative;
       font-family: "PT Sans";
  }
 
- .sorting-header{
+ .sorting-header {
      font-style: normal;
      font-weight: normal;
      font-size: 13px;
@@ -1817,7 +1828,7 @@ position: relative;
      font-family: "PT Sans";
  }
 
- .sorting-option{
+ .sorting-option {
      color: var(--medium-grey);
      font-style: normal;
      font-weight: normal;
@@ -1832,7 +1843,7 @@ position: relative;
      text-transform: uppercase;
       font-family: "PT Sans";
  }
- .sorting-option-selected{
+ .sorting-option-selected {
      color: var(--basic-red);
      border-bottom: 0px;
      outline: 0px;
@@ -1848,22 +1859,22 @@ position: relative;
       font-family: "PT Sans";
  }
 
- .sorting-option:hover{
+ .sorting-option:hover {
       color: var(--black);
       outline: 0px;
       cursor: pointer;
  }
- .sorting-option:active{
+ .sorting-option:active {
      color: var(--basic-red);
      border-bottom: 0px;
      outline: 0px;
 }
 
- .sorting-options{
+ .sorting-options {
      margin-right: 15px;
  }
  
- .sorting-up{
+ .sorting-up {
      margin: 0px;
      padding: 0px;
      height: 10px;
@@ -1874,13 +1885,13 @@ position: relative;
      background-image: url("../img/svg-technomart/sorting-up-inactive.svg");
  }
 
- .sorting-up:hover{
+ .sorting-up:hover {
      border: none;
      outline: none;
      background-image: url("../img/svg-technomart/sorting-up-hover.svg");
  }
 
- .sorting-up:active{
+ .sorting-up:active {
      border: none;
      outline: none;
      background-image: url("../img/svg-technomart/sorting-up-active.svg");
@@ -1896,7 +1907,7 @@ position: relative;
      margin-left: 46px;
      background-image: url("../img/svg-technomart/sorting-up-active.svg");
 }
- .sorting-down{
+ .sorting-down {
      margin: 0px;
      padding: 0px;
      height: 10px;
@@ -1908,13 +1919,13 @@ position: relative;
      background-image: url("../img/svg-technomart/sorting-down-inactive.svg");
  }
 
- .sorting-down:hover{
+ .sorting-down:hover {
      border: none;
      outline: none;
      background-image: url("../img/svg-technomart/sorting-down-hover.svg");
      cursor: pointer;
  }
- .sorting-down:active{
+ .sorting-down:active {
      border: none;
      outline: none;
      background-image: url("../img/svg-technomart/sorting-down-active.svg");
@@ -2059,7 +2070,6 @@ line-height: 18px;
      justify-content: center;
 }
  
-
 .modal-checkout {
      width:192px;
      height: 38px;
