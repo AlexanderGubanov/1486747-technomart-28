@@ -8,6 +8,7 @@ var yourMail = modalWrite.querySelector("[name=your-mail]");
 
 var mapLink = document.querySelector(".map");
 var modalMap = document.querySelector(".modal-map");
+var modalClosemap = document.querySelector(".modal-closemap");
 
 var linkDelivery = document.querySelector(".delivery");
 var linkGuarantee = document.querySelector(".guarantee");
@@ -19,9 +20,13 @@ var modalCredit = document.querySelector(".modal-credit");
 var buttonChoosen = document.querySelector(".button-choosen");
 var buttonDefault = document.querySelector(".button-default");
 
+var buttonForward = document.querySelector(".button-forward");
+var buttonBack = document.querySelector(".button-back");
+var perforators = document.querySelector(".perforators");
+var drills = document.querySelector(".drills");
+
 var linkBuy = document.querySelectorAll(".buy");
 var modalBasket = document.querySelector(".modal-add-basket");
-
 
 var isStorageSupport = true;
 var storage = "";
@@ -66,12 +71,26 @@ window.addEventListener("keydown", function (evt) {
   }
 });
 
+// slider 
+buttonForward.addEventListener("click", function (evt) {     
+  evt.preventDefault();
+  perforators.classList.remove("modal-show");
+  drills.classList.add("modal-show"); 
+});
+   
+buttonBack.addEventListener("click", function (evt) {     
+  evt.preventDefault();
+  drills.classList.remove("modal-show"); 
+  perforators.classList.add("modal-show"); 
+});
+
+// map
 mapLink.addEventListener("click", function (evt) {
   evt.preventDefault();
   modalMap.classList.add("modal-show");
 });
 
-modalClose.addEventListener("click", function (evt) {
+modalClosemap.addEventListener("click", function (evt) {
   evt.preventDefault();
   modalMap.classList.remove("modal-show");
 });
