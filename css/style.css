@@ -194,23 +194,41 @@ header a {
 
 /* search */
 
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance:none;
+}
+
 input[type="search"] {
-	width: 270px;
+	width: 268px;
 	padding-top: 11px;
 	padding-bottom: 11px;
 	background-color: var(--dark-navy);
 	color: white;
 	opacity: 1;
-	background-image: url("../img/svg-technomart/icon-search.svg");
+	background-image: url("../img/svg-technomart/icon-search-normal.svg");
 	background-repeat: no-repeat;
 	background-position: 17px center;
 	padding-left: 42px;
 	border: 0px;
 }
 
+input[type="search"]:hover {
+	background-image: url("../img/svg-technomart/icon-search.svg");
+}
+input[type="search"]:not(:hover, :focus) {
+	background-image: url("../img/svg-technomart/icon-search-focus.svg");
+	outline: none;
+}
+
 input[type="search"]:focus {
 	background-color: var(--white);
 	color: black;
+	background-image: url("../img/svg-technomart/icon-search-focus.svg");
+	border:none;
+	outline: none;
 }
 
 input[type="search"]::placeholder {
@@ -225,20 +243,28 @@ input[type="search"]::placeholder {
 	display: inline-block;
 	text-align: center;
 	box-sizing: border-box;
-	padding-top: 9px;
-	padding-bottom: 9px;
+	padding-top: 11px; 
+    padding-bottom: 8px; 
+	font-style: normal;
+font-weight: normal;
+font-size: 18px;
+font-family: "Cuprum", "Arial", sans-serif;
 }
 
 
 /* cart */
 
 .cart {
-	background-image: url("../img/svg-technomart/icon-cart.svg");
+	background-image: url("../img/svg-technomart/icon-cart-normal.svg");
 	background-repeat: no-repeat;
-	background-position: 12px center;
+	background-position: 16px center;
 	padding-left: 8px;
-	padding-left: 40px;
+	padding-left: 38px;
 	padding-right: 26px;
+}
+
+.cart:hover{
+	background-image: url("../img/svg-technomart/icon-cart.svg");
 }
 
 .cart:active {
@@ -260,10 +286,10 @@ input[type="search"]::placeholder {
 /* bookmarks */
 
 .bookmarks {
-	background-image: url("../img/svg-technomart/icon-bookmark.svg");
+	background-image: url("../img/svg-technomart/icon-bookmark-normal.svg");
 	background-repeat: no-repeat;
-	background-position: 12px center;
-	padding-left: 39px;
+	background-position: 19px center;
+	padding-left: 41px;
 	padding-right: 38px;
 }
 
@@ -272,6 +298,9 @@ input[type="search"]::placeholder {
 	color: rgba(255, 255, 255, 0.5);
 }
 
+.bookmarks:hover {
+	background-image: url("../img/svg-technomart/icon-bookmark.svg");
+}
 
 /* checkout */
 
@@ -331,6 +360,23 @@ input[type="search"]::placeholder {
 	padding-right: 45px;
 	padding-top: 7px;
 	padding-bottom: 8px;
+	margin-bottom: 2px;
+}
+.phone-catalog {
+	display: flex;
+	align-items: center;
+	border: 3px solid #FFFFFF;
+	box-sizing: border-box;
+	font-family: "Cuprum", "Arial", sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 21px;
+	color: var(--basic-red);
+	padding-left: 39px;
+	padding-right: 55px;
+	padding-top: 7px;
+	padding-bottom: 8px;
+	margin-bottom: 2px;
 }
 
 .phone svg {
@@ -344,6 +390,7 @@ input[type="search"]::placeholder {
 	font-size: 14px;
 	line-height: 24px;
 	text-align: center;
+	color: var(--navy);
 }
 
 
@@ -353,14 +400,29 @@ input[type="search"]::placeholder {
 	width: 299px;
 }
 
+.enter{
+	display: flex;
+    align-items: flex-start;
+}
 .login {
 	background-color: var(--white);
 	color: var(--black);
 	display: inline-block;
-	text-align: center;
 	line-height: 45px;
 	width: 121px;
-	margin-left: 10px;
+	font-family: "Cuprum", "Arial", sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 21px;
+	padding-left: 19px;
+	box-sizing: border-box;
+}
+.login a{
+	color:var(--black);
+}
+.login-icon{
+	width: 21px;
+    display: inline-block;
 }
 
 .registration {
@@ -369,8 +431,20 @@ input[type="search"]::placeholder {
 	display: inline-block;
 	text-align: center;
 	line-height: 45px;
-	width: 121px;
+	width: 150px;
 	margin-left: 10px;
+	font-family: "Cuprum", "Arial", sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 21px;
+
+}
+
+.address-top{
+	margin-left: 23px;
+}
+.address-top-catalog{
+	margin-left: 40px;
 }
 
 .profile-logout {
@@ -408,7 +482,7 @@ input[type="search"]::placeholder {
 	justify-content: center;
 	margin-top: 0px;
 	margin-bottom: 0px;
-	margin-top: 7px;
+
 }
 
 .user-submenu a {
@@ -420,7 +494,11 @@ input[type="search"]::placeholder {
 }
 
 .user-submenu li {
-	margin-right: 30px;
+	margin-right: 33px;
+}
+
+.user-submenu li:last-child{
+	margin-right: 39px;
 }
 
 .user-submenu a:hover {
@@ -464,9 +542,11 @@ input[type="search"]::placeholder {
 .navigation-list a {
 	display: inline-block;
 	text-align: center;
-	padding: 20px 31px;
+	padding: 18px 30px 22px 28px; /*20 31*/
 	box-sizing: border-box;
 }
+
+
 
 .navigation-list li:hover {
 	background-color: var(--dark-navy);
@@ -493,9 +573,12 @@ input[type="search"]::placeholder {
 .offers li {
 	width: 300px;
 	height: 123px;
-	padding: 20px 23px;
+	padding: 21px 22px;
 	box-sizing: border-box;
 	margin-bottom: 20px;
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .offer p {
@@ -516,7 +599,6 @@ input[type="search"]::placeholder {
 	justify-content: center;
 	align-items: center;
 	color: var(--white);
-	margin-top: 14px;
 	font-family: "Cuprum", "Arial", sans-serif;
 	font-weight: normal;
 	font-size: 14px;
@@ -543,7 +625,7 @@ input[type="search"]::placeholder {
 	background-color: var(--special-blue);
 	background-image: url("../img/svg-technomart/icon-2.svg");
 	background-repeat: no-repeat;
-	background-position: 194px center;
+	background-position: 194px 33px;
 }
 
 .techniс {
@@ -580,9 +662,13 @@ input[type="search"]::placeholder {
 }
 
 .slider form {
-     margin-top: 10px;
-     margin-bottom: 47px;
-    }
+    margin-bottom: 40px;
+    padding-left: 25px;
+    padding-right: 21px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
 
 .title-container {
 	height: 104px;
@@ -590,21 +676,12 @@ input[type="search"]::placeholder {
 	padding-left: 24px;
 	padding-top: 23px;
 	box-sizing: border-box;
+	margin-bottom: 16px;
 }
 
-.button-back {
-	position: relative;
-	left: 12px;
-	top: -20%;
-}
 
-.button-forward {
-	position: relative;
-	left: 560px;
-	top: -20%;
-}
 
-.title-container p {
+.title-container h2 {
 	font-family: "Cuprum", "Arial", sans-serif;
 	font-style: normal;
 	font-weight: bold;
@@ -612,7 +689,7 @@ input[type="search"]::placeholder {
 	color: var(--white);
 	text-transform: uppercase;
 	margin-top: 0px;
-	margin-bottom: 5px;
+	margin-bottom: 12px;
 }
 
 .title-container span {

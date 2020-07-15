@@ -24,6 +24,7 @@ var buttonForward = document.querySelector(".button-forward");
 var buttonBack = document.querySelector(".button-back");
 var perforators = document.querySelector(".perforators");
 var drills = document.querySelector(".drills");
+var vh = document.querySelector(".visually-hidden");
 
 var linkBuy = document.querySelectorAll(".buy");
 var modalBasket = document.querySelector(".modal-add-basket");
@@ -74,14 +75,14 @@ window.addEventListener("keydown", function (evt) {
 // slider 
 buttonForward.addEventListener("click", function (evt) {     
   evt.preventDefault();
-  perforators.classList.remove("modal-show");
+  perforators.classList.add("visually-hidden");
   drills.classList.add("modal-show"); 
 });
    
 buttonBack.addEventListener("click", function (evt) {     
   evt.preventDefault();
   drills.classList.remove("modal-show"); 
-  perforators.classList.add("modal-show"); 
+  perforators.classList.remove("visually-hidden"); 
 });
 
 // map
